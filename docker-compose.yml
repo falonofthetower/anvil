@@ -1,0 +1,16 @@
+services:
+  ralph:
+    build: .
+    container_name: anvil-ralph
+    volumes:
+      - .:/workspace
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - RALPH_MAX_ITERATIONS=${RALPH_MAX_ITERATIONS:-500}
+      - RALPH_TARGET_PHASE=${RALPH_TARGET_PHASE:-1}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    restart: "no"

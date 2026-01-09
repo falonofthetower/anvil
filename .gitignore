@@ -1,0 +1,28 @@
+# Build artifacts
+target/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Rust
+Cargo.lock
+**/*.rs.bk
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ralph logs
+ralph-logs/
+
+# Compiled Anvil outputs
+*.anvil.out
+*.wasm
